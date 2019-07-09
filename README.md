@@ -63,6 +63,6 @@ Ensure you're inside the **src** directory and enter
 ```
 node buy_items.js [filename]
 ```
-The bot will now sit idle until the first item's page is loaded. Chances are you are running the bot some time before the drop time. It is up to you to refresh the browser until the shop is open (sorry I didn't implement that). Once the shop page loads, the bot will take over, it will click the items and input info. Click submit once all the info is entered and be ready to solve the captcha.
+The bot will now sit idle until the first item's page is loaded. Chances are you are running the bot some time before the drop time. It is up to you to refresh the browser until the shop is open. Once the shop page loads, the bot will take over, it will click the items and input info. Click submit once all the info is entered and be ready to solve the captcha.
 **Note**: If no filename is entered, the bot will use items.js
 
