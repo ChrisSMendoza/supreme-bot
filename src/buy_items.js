@@ -18,7 +18,7 @@ for (const item of items) {
 	// go to the item's page
 	itemLink.click();
 	// wait for page to load before selecting size, color, etc
-	driver.wait(until.elementLocated(By.name('commit'))); 
+	driver.wait(until.elementLocated(By.name('commit')));
 
 	// the user specified colors
 	if(item.colors.length > 0) {
@@ -57,7 +57,7 @@ for (const item of items) {
 	driver.wait(until.elementLocated(By.linkText('checkout now')));
 } // all items have been added to the cart
 
-let checkoutNowBtn = 
+let checkoutNowBtn =
 	driver.wait(until.elementLocated(By.linkText('checkout now')));
 checkoutNowBtn.click(); // go to checkout page
 
@@ -69,7 +69,7 @@ form.names.forEach((name, index) => {
 
 	driver.findElement(By.name(name))
 	.then(inputField => {
-		
+
 		inputField.sendKeys(user.details[index]); // insert matching user info
 	},
 	(err) => {
@@ -87,3 +87,5 @@ select_option(selector, debit.exp_year);
 let terms_checkbox = driver.wait(until.elementLocated(By.id('order_terms')));
 terms_checkbox.sendKeys(Key.SPACE);
 
+const processPaymentBtn = driver.wait(until.elementLocated(By.name('commit')));
+processPaymentBtn.click();
